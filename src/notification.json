@@ -1,0 +1,44 @@
+{
+"container": "div",
+"elements": [
+    {"container": "h6","text": "@{word=notification}","attributes": {"id": "notificationHeader","focus": "true","tabindex": "0"}},
+    {"container": "p","text": "@{key=short}"},
+{"container": "div",
+"elements": [
+    {"container": "button","text": "@{word=infoNotification}","attributes": {"click": "notificationInfo"}},
+    {"container": "button","text": "@{word=hide}","attributes": {"click": "notificationHide"}}
+]
+},    
+{"container": "dialog","attributes": {"id": "notificationDialog"},
+"elements": [
+    {"container": "button","text": "@{word=close}","attributes": {"click": "notificationClose"}},
+{"container": "h1","text": "@{word=notification}"},
+{"container": "p","text": "@{key=message}"},
+{"container": "hr"},
+{"container": "div",
+"if": {
+"value": "@{key=object}",
+"condition": "==",
+"data": "object"
+},
+"elements": [
+
+{"container": "h3","text": "@{word=notificationContent}"},
+{"container": "ul","attributes": {"style": "list-style-type: none"},
+"elements": [
+    {"container": "li","text": "@{word=status}: @{key=status}"},
+{"container": "li","text": "@{word=message}: @{key=statusText}"},
+{"container": "li","text": "@{word=data}: @{key=result}"}
+]
+},
+{"container": "hr"}    
+]
+},
+{"container": "h3","text": "@{word=notificationMore}"},
+{"container": "p","text": "@{key=more}"}
+]
+}
+
+
+]
+}
